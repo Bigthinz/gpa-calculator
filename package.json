@@ -1,0 +1,23 @@
+{
+  "name": "gpa",
+  "version": "1.0.0",
+  "description": "student grading system",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass public/scss/main.scss public/css/style.css -w"
+  },
+  "author": "David Dzineku",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "mongoose": "^5.12.2",
+    "morgan": "^1.10.0"
+  }
+}
