@@ -47,7 +47,7 @@ body{
 
 .abs{
 	position: absolute;
-	width: 300px;
+	width: 210px;
 	right: 0;
 	bottom: 20%;
 	z-index: -1;
@@ -79,7 +79,8 @@ body{
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-
+			
+			
 			
 
 			.wrapper{
@@ -90,6 +91,11 @@ body{
 				border-radius: 7px;
 				position: relative;
 				box-shadow: 2px 3px 3px 2px rgba(0, 0, 0, 0.05);
+				background: url("./../asserts/log.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: bottom;
+
 
 
 				.logo{

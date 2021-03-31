@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GPA Calculator</title>
+	<link rel="shortcut icon" href="/asserts/icons8_greater_3.ico" type="image/x-icon">
+	<link type="text/css" rel="stylesheet" href="/css/style.css"></link>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" defer /></script>
+	<script src="/js/login.js" defer /></script>
+</head>
+<body>
+
+	<header id="login">
+		<div class="wrap">
+			<section class="intro">
+				<div class="wrapper">
+					
+					<div class="logo">
+						<img src="/asserts/icons8_greater_3.ico" alt="">
+						<p>GPA Calculator</p>
+					</div>
+					<div class="quote">
+						<h3>GPA Calculator</h3>
+						<p>Calculate your colleage GPA and commulative GPA, check your grade and understand how the GPA scale works.</p>
+					</div>
+					<div class="nav-tab">
+						<div class="tab-num">
+							<div class="log-tab">
+								<span class="tab-1 active">1</span>
+								<div class="progress active"></div>
+							</div>
+							<div class="log-tab">
+								<span class="tab-2">2</span>
+								<div class="progress"></div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			<!-- <section class="login-board board-active">
+				<div class="wrapper-2">
+					<div class="inn">
+						<h4>Please enter your details here</h4>
+						<p>Any information provided will be stored into your detail portal.</p>
+
+						<div class="inform">
+							<form action="">
+								<div class="logs">
+									<img src="/asserts/icons8_touch_id.ico" alt="">
+									<input type="text" name="index-number" id="" placeholder="Index Number">
+								</div>
+								<div class="logs">
+									<img src="/asserts/icons8_lock.ico" alt="">
+									<input type="password" name="password" id="" placeholder="Password">
+								</div>
+								<button class="submit" type="submit">Login</button>
+							</form>
+						</div>
+				</div>
+			</div>
+			</section> -->
+
+			<section class="signup-board">
+				<div class="wrapper-2">
+					<div class="inn">
+						<h4>Please enter your details here</h4>
+						<p>Any information provided will be stored into your detail portal.</p>
+
+						<div class="inform">
+							<form action="/auth/signup" method='POST' class="signup">
+								<div class=" no-log">
+									<div class="names" >
+										<img src="/asserts/icons8_user_3.ico" alt="">
+									<input type="text" name="firstName" id="firstName" placeholder="First Name"><br>
+									</div>
+									<div class="sec">
+										<input class="othername" type="text" name="secondName" id="secondName" placeholder="Second Name">
+									</div>
+								</div>
+								<div class="logs">
+									<img src="/asserts/icons8_touch_id.ico" alt="">
+									<input type="text" name="index-number" id="index-number" placeholder="index-number">
+								</div>
+								
+								<div class="logs">
+									<img src="/asserts/icons8_lock.ico" alt="">
+									<input type="password" name="password" id="password" placeholder="Password">
+								</div>
+								<button class="submit" type="submit">Next</button>
+							</form>
+						</div>
+
+				</div>
+			</div>
+			<div class="abs">
+				<lottie-player
+				autoplay
+			   
+				loop
+				mode="normal"
+				src="/asserts/lf30_editor_pjz8gbba.json"
+				style="width: 250px"
+			  >
+			  </lottie-player>
+						<img src="/asserts/Book Lovers.png" alt="">
+					</div>
+			</section>
+		</div>
+	</header>
+	
+</body>
+</html>
