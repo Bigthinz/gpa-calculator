@@ -16,7 +16,7 @@
     "nodeopen",
     "free-start"
   ],
-  "author": "Acquah Samuel",
+  "author": "King David",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.0",
