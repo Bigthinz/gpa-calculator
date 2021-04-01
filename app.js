@@ -2,7 +2,10 @@ const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
 
+
 const app = express()
+
+const authRoute = require('./routes/auth')
 const userRoute = require('./routes/userRoute')
 const viewRoute = require('./routes/viewRoute')
 
@@ -18,6 +21,7 @@ app.set('view engine', 'ejs')
 
 
 app.use('/',viewRoute)
+app.use('/auth',authRoute)
 app.use('/api/v1/user', userRoute)
 
 

@@ -1,4 +1,4 @@
-const { Login } = require("../../controller/viewController");
+
 
 const btn = document.querySelector('.submit')
 
@@ -18,6 +18,13 @@ const login = async(firstName, secondName, indexNumber, password)=>{
         })
 
 
+        if(result.data.status === 'success'){
+            window.setTimeout(()=>{
+                location.assign('/calculator')
+            },1000)
+        }
+
+
     }catch(err){
         console.log(err.response.data)
     }
@@ -31,7 +38,7 @@ document.querySelector('.signup').addEventListener('submit', e=>{
     const indexNumber = document.getElementById('index-number').value
     const password = document.getElementById('password').value
 
-    Login(firstName, secondName, indexNumber, password)
+    login(firstName, secondName, indexNumber, password)
 
 
 })
