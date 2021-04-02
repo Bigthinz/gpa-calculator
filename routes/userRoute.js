@@ -5,9 +5,11 @@ const auth = require('../controller/auth')
 const router = express.Router()
 
 router.post('/signup',auth.signup )
+router.post('/login', auth.login)
 
 router.route('/')
-   .post(userController.createUser)
+	  .get(userController.getAllUser)
+   	  .post(userController.createUser)
 
 
 

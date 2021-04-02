@@ -8,6 +8,7 @@ const app = express()
 const authRoute = require('./routes/auth')
 const userRoute = require('./routes/userRoute')
 const viewRoute = require('./routes/viewRoute')
+const resultRoute = require('./routes/resultRoute')
 
 
 
@@ -23,6 +24,7 @@ app.set('view engine', 'ejs')
 app.use('/',viewRoute)
 app.use('/auth',authRoute)
 app.use('/api/v1/user', userRoute)
+app.use('/api/v1/result', resultRoute)
 
 
 

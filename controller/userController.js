@@ -16,7 +16,7 @@ exports.createUser = async(req,res,next)=>{
 
 
 exports.getAllUser = async(req,res,next)=>{
-    const user = await user.find()
+    const user = await User.find()
 
     res.status(200).json({
         status:'success',
