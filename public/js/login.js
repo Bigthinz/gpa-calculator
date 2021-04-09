@@ -1,6 +1,8 @@
 
 
 const btn = document.querySelector('.submit')
+const signupBoard = document.querySelector('.signup-board')
+const loginBoard = document.querySelector('.login-board')
 
 
 const login = async(firstName, secondName, indexNumber, password)=>{

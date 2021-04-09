@@ -281,3 +281,21 @@
 	}
 
 }
+
+
+.submit-container{
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 40px;
+	margin-top: 40px;
+}
+
+.submit-btn{
+	
+	padding: 10px 20px;
+	border: 1px solid $blend;
+	background: #31262A;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+}

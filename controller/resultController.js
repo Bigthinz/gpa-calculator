@@ -1,7 +1,8 @@
 const Result = require('../model/resultModel')
+const catchAsync = require('../utils/catchAsync')
 
 
-exports.getAllResults = async(req,res,next)=>{
+exports.getAllResults = catchAsync(async(req,res,next)=>{
 	const result = await Result.find()
 	console.log(result)
 
@@ -13,12 +14,13 @@ exports.getAllResults = async(req,res,next)=>{
 	})
 
 
-}
+})
 
 
 
-exports.createResult = async(req,res,next)=>{
+exports.createResult = catchAsync(async(req,res,next)=>{
 	console.log(req.body)
+
 	const result = await Result.create(req.body)
 	res.status(200).json({
 		status:'success',
@@ -26,4 +28,4 @@ exports.createResult = async(req,res,next)=>{
 			result
 		}
 	})
-}
+})

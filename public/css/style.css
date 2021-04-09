@@ -394,3 +394,17 @@ body {
           line-height: 60px; }
           #table .wrap .result .c-head .r-row .r-data h4 {
             flex-basis: 40%; }
+
+.submit-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+  margin-top: 40px; }
+
+.submit-btn {
+  padding: 10px 20px;
+  border: 1px solid #E5675F;
+  background: #31262A;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer; }

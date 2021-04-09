@@ -1,9 +1,7 @@
 const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
-
-
-const app = express()
+const bodyParser = require('body-parser')
 
 const authRoute = require('./routes/auth')
 const userRoute = require('./routes/userRoute')
@@ -11,9 +9,22 @@ const viewRoute = require('./routes/viewRoute')
 const resultRoute = require('./routes/resultRoute')
 
 
+const app = express()
 
-app.use(morgan('dev'))
 app.use(express.json())
+
+
+app.use(express.urlencoded({extended: false}))
+app.use(morgan('dev'))
+
+
+
+
+
+
+
+// app.use(bodyParser.json())
+
 
 
 app.use(express.static(path.join(__dirname, 'public')))
