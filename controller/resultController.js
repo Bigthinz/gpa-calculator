@@ -21,8 +21,12 @@ exports.getAllResults = catchAsync(async(req,res,next)=>{
 exports.createResult = catchAsync(async(req,res,next)=>{
 	console.log(req.body)
 
+	if(!req.body.user){
+		req.body.user = req.user.id
+	}
+
 	const result = await Result.create(req.body)
-	res.status(200).json({
+	res.status(201).json({
 		status:'success',
 		data:{
 			result

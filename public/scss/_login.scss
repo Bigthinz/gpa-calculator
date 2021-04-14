@@ -170,17 +170,23 @@ body{
 		}
 
 		.board-active{
-			display: none !important;
+			display: block !important;
 		}
+
+		// .board-inactive{
+		// 	display: none !important;
+		// }
+
 
 		.login-board{
 			flex-basis: 50%;
 			
 
 			height: 100vh;
-			display: flex;
+			// display: flex;
 			justify-content: space-between;
 			align-items: center;
+			display: none;
 			// width:70%;
 			// background: $deep;
 			// height: 80%;
@@ -293,9 +299,10 @@ body{
 			flex-basis: 50%;
 
 			height: 100vh;
-			display: flex;
+			// display: flex;
 			justify-content: space-between;
 			align-items: center;
+			display: none;
 			// width:70%;
 			// background: $deep;
 			// height: 80%;

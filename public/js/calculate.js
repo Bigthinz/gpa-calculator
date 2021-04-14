@@ -184,7 +184,7 @@ creating.calcGrade(table)
 		submit.addEventListener('click',e=>{
 			e.preventDefault()
 
-			console.log(e.target.parentElement.parentElement.children[0].children[0].textContent)
+			const semister = e.target.parentElement.parentElement.children[0].children[0].textContent
 
 			
 			let course = document.querySelectorAll('.sem-1 .course')
@@ -245,12 +245,36 @@ creating.calcGrade(table)
 		},0)
 
 
-		console.log(res)
-		console.log(gp)
+		// console.log(res)
+		// console.log(gp)
 
-			
+			result(semister, crs,sco,cred,csrtyp,gp, grade)
 		})
 	
+
+
+	const result = async(semister,course,score,credit,courseType,grade, gradePoint)=>{
+		try{
+			const res = await axios({
+				method:"POST",
+				url:"http://localhost:5000/api/v1/result",
+				data:{
+					year:"",
+					semester:semister,
+					course:course,
+					score:score,
+					credit:credit,
+					courseType:courseType,
+					grade:grade,
+					gradePoint:gradePoint
+
+				}
+			})
+
+		}catch(err){
+			console.log(err.response.data)
+		}
+	}
 
 
 

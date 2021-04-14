@@ -7,15 +7,15 @@ const resultSchema = new mongoose.Schema({
 		type:String,
 		required: [true, 'Please provide a year'],
 		enum:{
-			values: ["one", "two", "three", "four"],
+			values: ["year 1", "year 2", "year 3", "year 4"],
 			message:  "Result must belong to a year"
 		}
 	},
-	semister:{
+	semester:{
 		type: String,
 		required:[true,"provide a semister"],
 		enum:{
-			values: ["one", "two"],
+			values: ["semester 1", "semester 2"],
 			message: "Result must belong to a semisterqg"
 		}
 	},
@@ -40,10 +40,10 @@ const resultSchema = new mongoose.Schema({
 		}
 	},
 	grade:{
-		type:[String]
+		type:[Number]
 	},
 	gradePoint:{
-		type:[Number]
+		type:[String]
 
 	},
 	user:{

@@ -2,6 +2,7 @@ const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
 
 const authRoute = require('./routes/auth')
 const userRoute = require('./routes/userRoute')
@@ -17,8 +18,16 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use(morgan('dev'))
 
+app.use(cookieParser)
 
+app.use((req, res, next) => {
+    req.requestTime = new Date().toISOString()
 
+    //to display headers of url
+    // console.log(req.headers)
+    console.log(req.cookies)
+    next()
+})
 
 
 
