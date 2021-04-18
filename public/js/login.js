@@ -3,7 +3,54 @@ const signupBoard = document.querySelector('.signup-board')
 const loginBoard = document.querySelector('.login-board')
 
 
-const login = async(firstName, secondName, indexNumber, password) => {
+
+
+const Login = async( indexNumber, password) => {
+    try {
+        console.log('sigin..')
+        const result = await axios({
+            method: "POST",
+            url: "http://localhost:5000/api/v1/user/login",
+            data: {
+                index_number: indexNumber,
+                password: password
+            }
+        })
+
+
+        if (result.data.status === 'success') {
+            window.setTimeout(() => {
+                location.assign('/calculator')
+            }, 1000)
+        }
+
+
+    } catch (err) {
+        console.log(err.response.data)
+    }
+}
+
+
+document.querySelector('.login').addEventListener('submit', e => {
+    e.preventDefault();
+
+    const indexNumber = document.getElementById('index-number1').value
+    const password = document.getElementById('password1').value
+
+    Login( indexNumber, password)
+
+
+})
+
+
+
+
+
+
+
+
+
+const Signup = async(firstName, secondName, indexNumber, password) => {
     try {
         console.log('sigin..')
         const result = await axios({
@@ -38,7 +85,7 @@ document.querySelector('.signup').addEventListener('submit', e => {
     const indexNumber = document.getElementById('index-number').value
     const password = document.getElementById('password').value
 
-    login(firstName, secondName, indexNumber, password)
+    Signup(firstName, secondName, indexNumber, password)
 
 
 })

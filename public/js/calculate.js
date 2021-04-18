@@ -159,12 +159,6 @@ class Create{
 					console.log(grade)
 				}
 	}
-
-
-	
-
-
-
 }
 
 
@@ -229,6 +223,10 @@ creating.calcGrade(table)
 				
 			})
 
+			let totalMark=[]
+
+			
+
 
 			console.log(crs)
 			console.log(sco)
@@ -249,6 +247,28 @@ creating.calcGrade(table)
 		// console.log(gp)
 
 			result(semister, crs,sco,cred,csrtyp,gp, grade)
+
+
+			let mainMark = ()=>{
+
+				for (var i = 0; i < cred.length; i++) {
+					totalMark.push(parseInt(cred[i]) * parseFloat(gp[i]))
+				}
+
+				let tt = totalMark.reduce((ab,id)=>{
+					return ab + id
+				},0)
+
+
+				console.log(tt)
+			}
+
+			mainMark()
+
+
+
+
+
 		})
 	
 
@@ -259,7 +279,7 @@ creating.calcGrade(table)
 				method:"POST",
 				url:"http://localhost:5000/api/v1/result",
 				data:{
-					year:"",
+					year:"year 1",
 					semester:semister,
 					course:course,
 					score:score,

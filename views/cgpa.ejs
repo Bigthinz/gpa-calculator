@@ -6,29 +6,37 @@
 
 	<title>GPA | Calculator</title>
 	<link rel="shortcut icon" href="public/asserts/icons8_greater_3.ico" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="public/css/style.css">
-	<script  src="public/js/calculate.js" defer /></script>
-	<script  src="public/js/tab.js" defer /></script>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script  src="/js/calculate.js" defer /></script>
+	<script  src="/js/tab.js" defer /></script>
 </head>
 <body>
 	
 	<header id="heads">
 		<div class="wrap">
 			<div class="img1">
-				<img src="public/asserts/school.png" alt="">
+				<lottie-player
+					  autoplay
+					 
+					  loop
+					  mode="normal"
+					  src="/asserts/lf30_editor_pjz8gbba.json"
+				  style="width: 250px">
+				</lottie-player>
+				<!-- <img src="public/asserts/school.png" alt=""> -->
 			</div>
 			<div class="title">
 				<h1>GPA Calculator</h1>
 			</div>
 			<div class="img1">
-				<img src="public/asserts/Book Lovers.png" alt="">
+				<img src="/asserts/Book Lovers.png" alt="">
 			</div>
 		</div>
 	</header>
 
 	<nav id="navtab">
 		<div class="wrap">
-			<a href="calculator.html" class=" tab"><div class="calc-tab">
+			<a href="/calculator" class=" tab"><div class="calc-tab">
 				<h4>Calculator</h4>
 			</div></a>
 			<a href="tab-2 " class="tab active-tab"><div class="cgpa-tab ">
@@ -41,21 +49,35 @@
 		</div>
 	</nav>
 
+	<div class="candidate">
+		<div class="wrap">
+			<% if (user) { %>
+			<div class="s-name"><%= user.firstName %></div>
+			<div class="s-indexnum"> # <%= user.index_number %></div>
+			<% } %>
+		</div>
+	</div>
+
+
 <article id="tab-1" class="tabs">
 	<section id="table" class="table">
 		<div class="wrap">
-			<div class="mag">
-				<div class="calc">
+			<div class=" gpacalc">
+				<% result.forEach(function(data){ %>
+				<div class="new">
+				<div class="calc ">
 
 					<!-- <div class="sem-head">
 						<div><h4>semester 1</h4></div>
 						<div><img src="public/asserts/icons8_drop_down_2.ico" alt=""></div>
 					</div> -->
 
+					
 					<div class="ori-head">
+						
 						<div class="ori-main">
 							<h4>semester 1</h4>
-							<div><img src="public/asserts/icons8_minus_sign.ico" alt=""></div>
+							<div><img src="/asserts/icons8_minus_sign.ico" alt=""></div>
 						</div>
 
 						<div class="t-head">
@@ -65,23 +87,83 @@
 							
 							<h4>credit</h4>
 							<h4>course type</h4>
-							<h4>grade</h4>						
+							<h4>grade</h4>	
+							<h4>grade point</h4>						
 						</div>
 
-						<div class="t-row">
-							<div class="t-data">
-								<div class="entry ids">1</div>
-								<div class="entry"><input type="text" name="course" placeholder="-"></div>
-								<div class="entry"><input type="text" name="scores" placeholder="-"></div>
+						<!-- <form class="cal-form">
+ -->						<div class="t-row-1 t-row cal-form">
+							<div class="t-data " >
 								
-								<div class="entry"><input type="text" name="credit" placeholder="-"></div>
-								<div class="entry"><input type="text" name="course-type" placeholder="regular"></div>
-								<div class="entry grade-point">-</div>						
+								<div class="entry ids">1</div>
+								
+								<div class="entry sem-1">
+									<% data.course.map((item)=>{ %>
+									<div>
+									<%= item %>
+									</div>
+									<% }) %>	
+								</div>
+									
+								<div class="entry sem-1">
+									<% data.score.map((item)=>{ %>
+									<div>
+									<%= item %>
+									</div>
+									<% }) %>	
+									
+								</div>
+								
+								<div class="entry sem-1">
+									<% data.credit.map((item)=>{ %>
+									<div>
+									<%= item %>
+									</div>
+									<% }) %>	
+								
+								</div>
+								<div class="entry sem-1">
+									<% data.courseType.map((item)=>{ %>
+									<div>
+									<%= item %>
+									</div>
+									<% }) %>	
+									</div>
+								
+								<div class="entry sem-1 grade-point">
+									<% data.gradePoint.map((item)=>{ %>
+									<div>
+									<%= item %>
+									</div>
+									<% }) %>	
+									</div>
+										
+								
+								<div class="entry sem-1 ids">
+									<% data.grade.map((item)=>{ %>
+									<div>
+									<%= item %>
+									</div>
+									<% }) %>	
+									</div>
+										
+									
+
+														
 							</div>
 
 						</div>
+					
+						<!-- <div class="submit-container">
+							<button  class="submit-btn">Calculator</button>
+						
+						</div> -->
+						<!-- </form> -->
 						
 					</div>
+					
+				
+
 					
 				</div>
 				<div class="result">
@@ -98,7 +180,7 @@
 						</div>
 
 						<div class="r-row">
-							<div class="r-data">
+							<!-- <div class="r-data">
 								<h4>1</h4>
 								<h4>database</h4>
 												
@@ -114,98 +196,25 @@
 								<h4>1</h4>
 								<h4>database</h4>
 														
-							</div>
+							</div> -->
+							<lottie-player
+						  autoplay
+						 
+						  loop
+						  mode="normal"
+						  src="/asserts/lf30_editor_dqzaa56j.json"
+						  style="width: 250px">
+						</lottie-player>
 						</div>
 						
 					</div>
 					
 				</div>
+				</div>
+				<% }) %>
 		</div>
 		</div>
 	</section>
-
-
-	<section id="table" class="table">
-		<div class="wrap">
-			<div class="mag">
-				<div class="calc">
-
-					<!-- <div class="sem-head">
-						<div><h4>semester 1</h4></div>
-						<div><img src="public/asserts/icons8_drop_down_2.ico" alt=""></div>
-					</div> -->
-
-					<div class="ori-head">
-						<div class="ori-main">
-							<h4>semester 1</h4>
-							<div><img src="public/asserts/icons8_minus_sign.ico" alt=""></div>
-						</div>
-
-						<div class="t-head">
-							<h4>#</h4>
-							<h4>course</h4>
-							<h4>scores</h4>
-							<h4>grade</h4>
-							<h4>credit</h4>
-							<h4>course type</h4>						
-						</div>
-
-						<div class="t-row">
-							<div class="t-data">
-								<div class="entry">1</div>
-								<div class="entry"><input type="text" name="course" placeholder="-"></div>
-								<div class="entry"><input type="text" name="scores" placeholder="-"></div>
-								<div class="entry">-</div>
-								<div class="entry"><input type="text" name="credit" placeholder="-"></div>
-								<div class="entry"><input type="text" name="course-type" placeholder="regular"></div>						
-							</div>
-
-						</div>
-						
-					</div>
-					
-				</div>
-				<div class="result">
-					<div class="c-head">
-						<div class="c-main">
-							<div class="gpa-head"><h4>current gpa</h4></div>
-							
-						</div>
-
-						<div class="r-head">
-							<h4>#</h4>
-							<h4>course name</h4>
-												
-						</div>
-
-						<div class="r-row">
-							<div class="r-data">
-								<h4>1</h4>
-								<h4>database</h4>
-												
-							</div>
-
-							<div class="r-data">
-								<h4>1</h4>
-								<h4>database</h4>
-														
-							</div>
-
-							<div class="r-data">
-								<h4>1</h4>
-								<h4>database</h4>
-														
-							</div>
-						</div>
-						
-					</div>
-					
-				</div>
-		</div>
-		</div>
-	</section>
-
-
 </article>
 
 
@@ -213,7 +222,7 @@
 
 
 
-
+<!-- 
 <article id="tab-2" class="tabs">
 	<section id="table" class="table">
 		<div class="wrap">
@@ -223,7 +232,7 @@
 					<!-- <div class="sem-head">
 						<div><h4>semester 1</h4></div>
 						<div><img src="public/asserts/icons8_drop_down_2.ico" alt=""></div>
-					</div> -->
+					</div> 
 
 					<div class="ori-head">
 						<div class="ori-main">
@@ -306,7 +315,7 @@
 					<!-- <div class="sem-head">
 						<div><h4>semester 1</h4></div>
 						<div><img src="public/asserts/icons8_drop_down_2.ico" alt=""></div>
-					</div> -->
+					</div> 
 
 					<div class="ori-head">
 						<div class="ori-main">
@@ -380,7 +389,7 @@
 
 
 </article>
-
+ -->
 
 		
 
