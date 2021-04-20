@@ -82,7 +82,7 @@
 
 						<div class="t-head">
 							<h4>#</h4>
-							<h4>course</h4>
+							<h4 class="course-space">course</h4>
 							<h4>scores</h4>
 							
 							<h4>credit</h4>
@@ -95,9 +95,13 @@
  -->						<div class="t-row-1 t-row cal-form">
 							<div class="t-data " >
 								
-								<div class="entry ids">1</div>
+								<div class="entry ids">
+									<% for (var i = 1; i <= data.course.length; i++){ %>
+									<div><%= i %></div>
+									<% } %>
+								</div>
 								
-								<div class="entry sem-1">
+								<div class="entry sem-1 course-space">
 									<% data.course.map((item)=>{ %>
 									<div>
 									<%= item %>

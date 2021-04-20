@@ -429,3 +429,6 @@ body {
   color: #fff;
   border-radius: 5px;
   cursor: pointer; }
+
+.course-space {
+  flex: 4; }

@@ -246,16 +246,32 @@ creating.calcGrade(table)
 		// console.log(res)
 		// console.log(gp)
 
-			result(semister, crs,sco,cred,csrtyp,gp, grade)
+		//initializing tt
+		let tt, tcred,
+		newtab = [];
+		let totalCred = ()=>{
+			
+			for(let i =0; i< cred.length; i++){
+				newtab.push(parseFloat(cred[i]))
+			}
+
+			tcred = newtab.reduce((init, val)=>{
+				return init + val
+			},0)
+
+			console.log(tcred)
+		}
 
 
-			let mainMark = ()=>{
+		let mainMark = ()=>{
+
+
 
 				for (var i = 0; i < cred.length; i++) {
-					totalMark.push(parseInt(cred[i]) * parseFloat(gp[i]))
+					totalMark.push(parseFloat(cred[i]) * parseFloat(gp[i]))
 				}
 
-				let tt = totalMark.reduce((ab,id)=>{
+				 tt = totalMark.reduce((ab,id)=>{
 					return ab + id
 				},0)
 
@@ -263,7 +279,19 @@ creating.calcGrade(table)
 				console.log(tt)
 			}
 
+
+
+			result(semister, crs,sco,cred,csrtyp,gp, grade)
+
+			console.log('submitted')
+			submit.setAttribute('disabled', 'disabled')
+
+
+			
+			totalCred()
 			mainMark()
+
+
 
 
 
@@ -291,8 +319,21 @@ creating.calcGrade(table)
 				}
 			})
 
+
+			
+
+			 // if (result.data.status === 'success') {
+    //         window.setTimeout(() => {
+    //             location.assign('/calculator')
+    //         }, 1000)
+    //     }
+
+
+
+
+
 		}catch(err){
-			console.log(err.response.data)
+			console.log(err.response)
 		}
 	}
 
