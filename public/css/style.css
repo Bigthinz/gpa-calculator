@@ -428,7 +428,85 @@ body {
   background: #31262A;
   color: #fff;
   border-radius: 5px;
-  cursor: pointer; }
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .course-space {
   flex: 4; }
+
+#position {
+  width: 100%;
+  margin-bottom: 80px; }
+  #position .wrap {
+    width: 80%;
+    margin: auto; }
+    #position .wrap h3 {
+      margin-bottom: 20px;
+      text-transform: uppercase; }
+    #position .wrap .init-year .semisters {
+      background: #1F2125;
+      display: flex;
+      justify-content: space-bwtween;
+      align-items: center;
+      line-height: 20px;
+      margin-bottom: 40px;
+      border-radius: 7px;
+      overflow: hidden; }
+      #position .wrap .init-year .semisters .head {
+        flex: 3; }
+      #position .wrap .init-year .semisters .mark {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        #position .wrap .init-year .semisters .mark-item {
+          flex-basis: 50%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          #position .wrap .init-year .semisters .mark-item img {
+            width: 15px !important; }
+          #position .wrap .init-year .semisters .mark-item span {
+            margin: 0px 10px; }
+        #position .wrap .init-year .semisters .mark-item-icon {
+          text-align: center;
+          height: 100%; }
+
+.tab-img {
+  overflow: hidden;
+  width: 100px;
+  height: 60px;
+  background: url("../asserts/IMG-20201025-WA0007.jpg");
+  background-size: cover;
+  position: relative;
+  margin-right: 40px; }
+  .tab-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(21, 5, 42, 0.2); }
+
+.tab-img-2 {
+  overflow: hidden;
+  width: 100px;
+  height: 60px;
+  background: url("../asserts/IMG-20201025-WA0023.jpg");
+  background-size: cover;
+  position: relative;
+  margin-right: 40px; }
+  .tab-img-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(21, 5, 42, 0.2); }
+
+.spin {
+  width: 10px; }

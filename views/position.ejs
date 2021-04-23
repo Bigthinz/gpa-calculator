@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GPA | Position</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js" defer /></script>
+</head>
+<body>
+
+	<header id="heads">
+		<div class="wrap">
+			<div class="img1">
+				<lottie-player
+					  autoplay
+					 
+					  loop
+					  mode="normal"
+					  src="/asserts/boy.json"
+				  style="width: 250px">
+				</lottie-player>
+				<!-- <img src="public/asserts/school.png" alt=""> -->
+			</div>
+			<div class="title">
+				<h1>GPA Calculator</h1>
+			</div>
+			<div class="img1">
+				<img src="/asserts/Book Lovers.png" alt="">
+			</div>
+		</div>
+	</header>
+
+	<nav id="navtab">
+		<div class="wrap">
+			<a href="/calculator" class=" tab"><div class="calc-tab">
+				<h4>Calculator</h4>
+			</div></a>
+			<a href="/cgpa " class="tab "><div class="cgpa-tab ">
+				<h4>CGPA</h4>
+			</div></a>
+			<a href="#" class="tab active-tab"><div class="pos-tab">
+				<h4>Position</h4>
+			</div></a>
+			
+		</div>
+	</nav>
+
+	<div class="candidate">
+		<div class="wrap">
+			<% if (user) { %>
+			<div class="s-name"><%= user.firstName %></div>
+			<div class="s-indexnum"> # <%= user.index_number %></div>
+			<% } %>
+		</div>
+	</div>
+
+
+	<section id="position">
+		<div class="wrap">
+			<div class="years">
+				<h3>Year one</h3>
+				<div class="init-year">
+					
+					<div class="semisters" >
+						<div class="tab-img"></div>
+						<div class="head"><h4>semister 1</h4></div>
+						<div  class="mark">
+							<div class="mark-item">
+								<span>gpa</span>
+								<span>3.5</span>
+							</div>
+							<div class="mark-item-icon">
+								<img src="/asserts/icons8_plus.ico" alt="">
+							</div>
+						</div>
+						
+					</div>
+
+					<div class="semisters" >
+						<div class="tab-img-2"></div>
+						<div class="head"><h4>semister 1</h4></div>
+						<div class="mark">
+							<div class="mark-item">
+								<span>gpa</span>
+								<span>3.5</span>
+							</div>
+							<div class="mark-item-icon">
+								<img src="/asserts/icons8_plus.ico" alt="">
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+
+
+
+
+	<section id="position">
+		<div class="wrap">
+			<div class="years">
+				<h3>Year two</h3>
+				<div class="init-year">
+					
+					<div class="semisters" >
+						<div class="tab-img"></div>
+						<div class="head"><h4>semister 1</h4></div>
+						<div  class="mark">
+							<div class="mark-item">
+								<span>gpa</span>
+								<span>3.5</span>
+							</div>
+							<div class="mark-item-icon">
+								<img src="/asserts/icons8_plus.ico" alt="">
+							</div>
+						</div>
+						
+					</div>
+
+					<div class="semisters" >
+						<div class="tab-img-2"></div>
+						<div class="head"><h4>semister 1</h4></div>
+						<div class="mark">
+							<div class="mark-item">
+								<span>gpa</span>
+								<span>3.5</span>
+							</div>
+							<div class="mark-item-icon">
+								<img src="/asserts/icons8_plus.ico" alt="">
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+	
+</body>
+</html>

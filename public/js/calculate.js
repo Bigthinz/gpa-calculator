@@ -179,7 +179,11 @@ creating.calcGrade(table)
 			e.preventDefault()
 
 			const semister = e.target.parentElement.parentElement.children[0].children[0].textContent
-
+			submit.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto;  display: block; shape-rendering: auto;" width="20px" height="20px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<circle cx="50" cy="50" r="32" stroke-width="8" stroke="#17cc53" stroke-dasharray="50.26548245743669 50.26548245743669" fill="none" stroke-linecap="round">
+  <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" keyTimes="0;1" values="0 50 50;360 50 50"></animateTransform>
+</circle>
+</svg>Loading...`
 			
 			let course = document.querySelectorAll('.sem-1 .course')
 		    const scores = document.querySelectorAll('.sem-1 .scores')
@@ -281,15 +285,24 @@ creating.calcGrade(table)
 
 
 
-			result(semister, crs,sco,cred,csrtyp,gp, grade)
-
-			console.log('submitted')
-			submit.setAttribute('disabled', 'disabled')
-
-
+			
 			
 			totalCred()
 			mainMark()
+
+			//calcultating gpa
+			let tcgpa = tt/tcred
+
+			tcgpa = tcgpa.toFixed(2)
+
+			result(semister, crs,sco,cred,csrtyp,gp, grade,tcgpa)
+
+			console.log('submitted')
+			
+			submit.setAttribute('disabled', 'disabled')
+
+
+			console.log(`your total credit is ${tcred} and your gpa is ${tt} and your cgpa is ${tcgpa}`)
 
 
 
@@ -301,7 +314,7 @@ creating.calcGrade(table)
 	
 
 
-	const result = async(semister,course,score,credit,courseType,grade, gradePoint)=>{
+	const result = async(semister,course,score,credit,courseType,grade, gradePoint,gpa)=>{
 		try{
 			const res = await axios({
 				method:"POST",
@@ -314,10 +327,17 @@ creating.calcGrade(table)
 					credit:credit,
 					courseType:courseType,
 					grade:grade,
-					gradePoint:gradePoint
+					gradePoint:gradePoint,
+					gpa:gpa
 
 				}
 			})
+
+			if(result.data.status === 'success'){
+				submit.removeAttribute('disabled')
+			submit.innerHTML ='Calculate'
+
+		}
 
 
 			
@@ -334,6 +354,8 @@ creating.calcGrade(table)
 
 		}catch(err){
 			console.log(err.response)
+			submit.removeAttribute('disabled')
+			submit.innerHTML ='Calculate'
 		}
 	}
 

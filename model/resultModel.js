@@ -46,7 +46,7 @@ const resultSchema = new mongoose.Schema({
 		type:[String]
 
 	},
-	gpa:String,
+	gpa:Number,
 	user:{
 		type:mongoose.Schema.ObjectId,
 		ref: 'User',
