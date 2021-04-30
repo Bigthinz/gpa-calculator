@@ -510,3 +510,32 @@ body {
 
 .spin {
   width: 10px; }
+
+.gpa-wrap {
+  padding: 30px 20px; }
+  .gpa-wrap .gp-head {
+    text-align: center;
+    font-size: 13px;
+    padding: 10px 20px;
+    background-color: #1E392D;
+    margin: auto;
+    margin-bottom: 50px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(30, 57, 45, 0.5); }
+  .gpa-wrap .gp-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 17px; }
+    .gpa-wrap .gp-div div {
+      flex-basis: 50px; }
+    .gpa-wrap .gp-div .gp-text {
+      color: #D1443B; }
+    .gpa-wrap .gp-div .ac-gpa {
+      border: 1px solid #D1443B;
+      border-radius: 5px;
+      text-align: center;
+      padding: 5px 17px;
+      background: #31262A; }

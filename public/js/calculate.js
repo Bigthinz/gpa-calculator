@@ -333,10 +333,7 @@ creating.calcGrade(table)
 				}
 			})
 
-			if(result.data.status === 'success'){
-				submit.removeAttribute('disabled')
-			submit.innerHTML ='Calculate'
-
+			if(result.data.status === 'success'){npm
 		}
 
 

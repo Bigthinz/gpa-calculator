@@ -55,29 +55,36 @@
 		</div>
 	</div>
 
-
+	<% if(result){ %>
 	<section id="position">
 		<div class="wrap">
 			<div class="years">
 				<h3>Year one</h3>
 				<div class="init-year">
 					
+						<% result.splice(0,2).forEach(function(data){  %>
 					<div class="semisters" >
 						<div class="tab-img"></div>
+						
 						<div class="head"><h4>semister 1</h4></div>
+
+						
 						<div  class="mark">
 							<div class="mark-item">
 								<span>gpa</span>
-								<span>3.5</span>
+								<span><%= data.gpa %></span>
 							</div>
 							<div class="mark-item-icon">
 								<img src="/asserts/icons8_plus.ico" alt="">
 							</div>
 						</div>
+							
 						
 					</div>
+					<% }) %>
+					
 
-					<div class="semisters" >
+					<!-- <div class="semisters" >
 						<div class="tab-img-2"></div>
 						<div class="head"><h4>semister 1</h4></div>
 						<div class="mark">
@@ -90,7 +97,110 @@
 							</div>
 						</div>
 						
+					</div> -->
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+
+
+
+	<section id="position">
+		<div class="wrap">
+			<div class="years">
+				<h3>Year Two</h3>
+				<div class="init-year">
+					
+						<% result.splice(0,2).forEach(function(data){  %>
+					<div class="semisters" >
+						<div class="tab-img"></div>
+						
+						<div class="head"><h4>semister 1</h4></div>
+
+						
+						<div  class="mark">
+							<div class="mark-item">
+								<span>gpa</span>
+								<span><%= data.gpa %></span>
+							</div>
+							<div class="mark-item-icon">
+								<img src="/asserts/icons8_plus.ico" alt="">
+							</div>
+						</div>
+							
+						
 					</div>
+					<% }) %>
+					
+
+					<!-- <div class="semisters" >
+						<div class="tab-img-2"></div>
+						<div class="head"><h4>semister 1</h4></div>
+						<div class="mark">
+							<div class="mark-item">
+								<span>gpa</span>
+								<span>3.5</span>
+							</div>
+							<div class="mark-item-icon">
+								<img src="/asserts/icons8_plus.ico" alt="">
+							</div>
+						</div>
+						
+					</div> -->
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+	<% } %>
+
+
+
+	<section id="position">
+		<div class="wrap">
+			<div class="years">
+				<h3>Year Three</h3>
+				<div class="init-year">
+					<% if(result){ %>
+						<% result.splice(0,2).forEach(function(data){  %>
+					<div class="semisters" >
+						<div class="tab-img"></div>
+						
+						<div class="head"><h4>semister 1</h4></div>
+
+						
+						<div  class="mark">
+							<div class="mark-item">
+								<span>gpa</span>
+								<span><%= data.gpa %></span>
+							</div>
+							<div class="mark-item-icon">
+								<img src="/asserts/icons8_plus.ico" alt="">
+							</div>
+						</div>
+							
+						
+					</div>
+					<% }) %>
+					<% } %>
+
+					<!-- <div class="semisters" >
+						<div class="tab-img-2"></div>
+						<div class="head"><h4>semister 1</h4></div>
+						<div class="mark">
+							<div class="mark-item">
+								<span>gpa</span>
+								<span>3.5</span>
+							</div>
+							<div class="mark-item-icon">
+								<img src="/asserts/icons8_plus.ico" alt="">
+							</div>
+						</div>
+						
+					</div> -->
 				</div>
 				
 			</div>
@@ -102,6 +212,58 @@
 
 
 	<section id="position">
+		<div class="wrap">
+			<div class="years">
+				<h3>Year Four</h3>
+				<div class="init-year">
+					<% if(result){ %>
+						<% result.splice(6,8).forEach(function(data){  %>
+					<div class="semisters" >
+						<div class="tab-img"></div>
+						
+						<div class="head"><h4>semister 1</h4></div>
+
+						
+						<div  class="mark">
+							<div class="mark-item">
+								<span>gpa</span>
+								<span><%= data.gpa %></span>
+							</div>
+							<div class="mark-item-icon">
+								<img src="/asserts/icons8_plus.ico" alt="">
+							</div>
+						</div>
+							
+						
+					</div>
+					<% }) %>
+					<% } %>
+
+					<!-- <div class="semisters" >
+						<div class="tab-img-2"></div>
+						<div class="head"><h4>semister 1</h4></div>
+						<div class="mark">
+							<div class="mark-item">
+								<span>gpa</span>
+								<span>3.5</span>
+							</div>
+							<div class="mark-item-icon">
+								<img src="/asserts/icons8_plus.ico" alt="">
+							</div>
+						</div>
+						
+					</div> -->
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+
+
+
+
+	<!-- <section id="position">
 		<div class="wrap">
 			<div class="years">
 				<h3>Year two</h3>
@@ -141,7 +303,7 @@
 			</div>
 			
 		</div>
-	</section>
+	</section> -->
 	
 </body>
 </html>

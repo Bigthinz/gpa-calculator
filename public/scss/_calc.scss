@@ -484,3 +484,47 @@
 .spin{
 	width: 10px;
 }
+
+.gpa-wrap{
+	padding: 30px 20px;
+
+
+	.gp-head{
+		text-align: center;
+		font-size: 13px;
+		padding: 10px 20px;
+		background-color: $light-green;
+		margin: auto;
+		margin-bottom: 50px;
+		width: 150px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 10px rgba(30,57,45,.5);
+
+
+	}
+
+	.gp-div{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 50px;
+		font-size: 17px;
+		
+
+		div{
+			flex-basis: 50px;
+		}
+
+		.gp-text{
+			color:$blend-light;
+		}
+
+		.ac-gpa{
+			border: 1px solid $blend-light;
+			border-radius: 5px;
+			text-align: center;
+			padding: 5px 17px;
+			background: #31262A;
+		}
+	}
+}
