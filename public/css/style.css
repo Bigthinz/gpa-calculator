@@ -540,6 +540,35 @@ body {
       padding: 5px 17px;
       background: #31262A; }
 
+select {
+  background: none;
+  color: #fff;
+  padding: 6px 15px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  text-align: center; }
+  select option {
+    color: #fff;
+    background: #31262A; }
+    select option:hover {
+      display: none; }
+
+.cgpa-result {
+  margin: auto;
+  width: 200px;
+  font-size: 17px;
+  text-align: center; }
+  .cgpa-result div {
+    font-size: 25px;
+    color: #25D265;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #E5675F;
+    border-radius: 7px;
+    letter-spacing: 3px;
+    background: #31262A; }
+
 .alert {
   position: fixed;
   left: 50%;

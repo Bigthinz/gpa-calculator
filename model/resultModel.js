@@ -7,7 +7,7 @@ const resultSchema = new mongoose.Schema({
 		type:String,
 		required: [true, 'Please provide a year'],
 		enum:{
-			values: ["year 1", "year 2", "year 3", "year 4"],
+			values: ["year-1", "year-2", "year-3", "year-4"],
 			message:  "Result must belong to a year"
 		}
 	},
@@ -15,15 +15,15 @@ const resultSchema = new mongoose.Schema({
 		type: String,
 		required:[true,"provide a semister"],
 		enum:{
-			values: ["semester 1", "semester 2"],
+			values: ["semester-1", "semester-2"],
 			message: "Result must belong to a semister"
 		}
 	},
-	academic_year:{
-		type: String,
-		unique: true,
-		required:[true, 'Please provide academic year']
-	},
+	// academic_year:{
+	// 	type: String,
+	// 	unique: true,
+	// 	required:[true, 'Please provide academic year']
+	// },
 	course:{
 		type:[String],
 		required: [true, 'Please provide a course']

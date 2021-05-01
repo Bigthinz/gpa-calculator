@@ -537,6 +537,67 @@
 }
 
 
+select{
+	background: none;
+	color: #fff;
+	padding: 6px 15px;
+	outline: none;
+	border: 1px solid rgba(0,0,0,.9);
+			border-radius: 5px;
+			text-align: center;
+		
+			// background: #31262A;
+	
+
+	option{
+		color: #fff;
+		background: #31262A;
+		
+
+		&:hover{
+			display: none;
+		}
+	}
+}
+
+// select.decorated option:focus{
+// 	background-color: green;
+// }
+
+// select:focus > option:checked { 
+//     background: $green !important;
+// }
+
+
+
+.cgpa-result{
+	margin: auto;
+	width: 200px;
+	font-size: 17px;
+	text-align: center;
+
+	div{
+		font-size: 25px;
+		color: $green;
+		padding: 10px;
+		margin-top: 20px;
+		border: 1px solid $blend;
+		border-radius: 7px;
+		letter-spacing: 3px;
+		
+		background: #31262A;
+	}
+
+}
+
+
+
+  
+
+
+
+
+
 
 
 

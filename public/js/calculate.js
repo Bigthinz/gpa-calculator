@@ -43,11 +43,37 @@ class Create{
 
 				 add.innerHTML = `
 								<div class="entry ids">${this.counter}</div>
-								<div class="entry sem-1"><input type="text" name="course" class="course" placeholder="-" /></div>
+								<div class="entry sem-1 ">
+									<select name="course" id="course" class="course">
+										<option value="Auditing">Auditing</option>
+										<option value="Networking">Networking</option>
+										<option value="Data Mining">Data Mining</option>
+										<option value="Java">Java</option>
+										<option value="French">French</option>
+										<option value="Economics">Economics</option>
+										<option value="C#">C#</option>
+										<option value="Cryptography">Cryptography</option>
+									</select>
+									<!-- <input type="text" name="course" class="course" placeholder="-" /> -->
+								</div>
 								<div class="entry sem-1"><input type="text" name="scores" class="scores" placeholder="-"></div>
 								
-								<div class="entry sem-1"><input type="text" name="credit" class="credit" placeholder="-"></div>
-								<div class="entry sem-1"><input type="text" name="course-type" class="course-type" placeholder="regular"></div>
+								<div class="entry sem-1">
+									<select name="credit" id="credit" class="credit">
+										<option value="2">2</option>
+										<option value="3">3</option>
+										
+									</select>
+									<!-- <input type="text" name="credit" class="credit" placeholder="-"> -->
+								</div>
+								<div class="entry sem-1">
+									<select name="credit" id="course-type" class="course-type">
+										<option value="regular">regular</option>
+										<option value="elective">elective</option>
+										
+									</select>
+									<!-- <input type="text" name="course-type" class="course-type" placeholder="regular"> -->
+								</div>
 								<div class="entry sem-1 grade-point">-</div>						
 							`
 
@@ -195,7 +221,9 @@ creating.calcGrade(table)
 		    const scores = document.querySelectorAll('.sem-1 .scores')
 		    const credit = document.querySelectorAll('.sem-1 .credit')
 		    const courseType = document.querySelectorAll('.sem-1 .course-type')
-		     const gradePoint = document.querySelectorAll('.grade-point')
+			 const gradePoint = document.querySelectorAll('.grade-point')
+			 let sem = document.querySelector('#sem').value
+			 let year = document.querySelector('#year').value
 			
 		    let crs = []
 		    let sco = []
@@ -245,6 +273,8 @@ creating.calcGrade(table)
 			console.log(cred)
 			console.log(csrtyp)
 			console.log(grade)
+			console.log(`this is the year ${year}`)
+			console.log(`this is the semester ${sem}`)
 
 			const init =0
 
@@ -303,7 +333,7 @@ creating.calcGrade(table)
 
 			tcgpa = tcgpa.toFixed(2)
 
-			result(semister, crs,sco,cred,csrtyp,gp, grade,tcgpa,academic)
+			result(year, sem, crs,sco,cred,csrtyp,gp, grade,tcgpa,academic)
 
 			console.log('submitted')
 			
@@ -322,14 +352,14 @@ creating.calcGrade(table)
 	
 
 
-	const result = async(semister,course,score,credit,courseType,grade, gradePoint,gpa, academic)=>{
+	const result = async(year,semister,course,score,credit,courseType,grade, gradePoint,gpa)=>{
 		try{
 			const res = await axios({
 				method:"POST",
 				url:"http://localhost:5000/api/v1/result",
 				data:{
-					year:"year 1",
-					semester:"semester 1",
+					year:year,
+					semester:semister,
 					course:course,
 					score:score,
 					credit:credit,

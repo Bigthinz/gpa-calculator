@@ -59,6 +59,16 @@
 		</div>
 	</div>
 
+	<!-- <div class="cgpa-tab ">
+		<h4><%= nowGpa %></h4>
+	</div> -->
+
+
+	<div class="cgpa-result ">
+		<h4>Your current CGPA is: <div><%= nowGpa %></div></h4>
+	</div>
+
+
 
 <article id="tab-1" class="tabs">
 	<section id="table" class="table">
@@ -77,7 +87,8 @@
 					<div class="ori-head">
 						
 						<div class="ori-main">
-							<h4>semester 1</h4>
+							<h4><%= data.semester %></h4>
+							<h4><%= data.year %></h4>
 							<div><img src="/asserts/icons8_minus_sign.ico" alt=""></div>
 						</div>
 
@@ -176,7 +187,7 @@
 						<div class="gp-head">Current GPA</div>
 
 						<div class="gp-div">
-							<div class="gp-text">CGPA</div>
+							<div class="gp-text">GPA</div>
 							<div class="ac-gpa"><%= data.gpa %></div>
 						</div>
 
@@ -190,6 +201,9 @@
 		</div>
 	</section>
 </article>
+
+
+
 
 
 
