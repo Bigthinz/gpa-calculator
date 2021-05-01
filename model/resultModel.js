@@ -16,8 +16,13 @@ const resultSchema = new mongoose.Schema({
 		required:[true,"provide a semister"],
 		enum:{
 			values: ["semester 1", "semester 2"],
-			message: "Result must belong to a semisterqg"
+			message: "Result must belong to a semister"
 		}
+	},
+	academic_year:{
+		type: String,
+		unique: true,
+		required:[true, 'Please provide academic year']
 	},
 	course:{
 		type:[String],

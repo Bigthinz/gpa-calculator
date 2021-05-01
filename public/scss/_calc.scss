@@ -26,6 +26,13 @@
 
 
 
+
+
+
+
+
+
+
 #heads{
 	width: 100%;
 	height: 300px;
@@ -528,3 +535,31 @@
 		}
 	}
 }
+
+
+
+
+
+.alert{
+	position: fixed;
+	left: 50%;
+	top: 0;
+	font-size: 11px;
+	line-height: 30px;
+	padding: 5px 45px;
+	color: #f3f3f3;
+	transform: translateX(-50%);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.1);
+	z-index: 999;
+}
+
+.alert--error{
+	background: #B53426;
+}
+
+.alert--success{
+	background: #96B668;
+}
+

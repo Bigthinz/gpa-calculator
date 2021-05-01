@@ -55,6 +55,161 @@
 		</div>
 	</div>
 
+
+
+
+
+
+	<article id="tab-1" class="tabs">
+		<section id="table" class="table">
+			<div class="wrap">
+				<div class=" gpacalc">
+					<% result.forEach(function(data){ %>
+
+						
+					<div class="new">
+					<div class="calc ">
+	
+						<!-- <div class="sem-head">
+							<div><h4>semester 1</h4></div>
+							<div><img src="public/asserts/icons8_drop_down_2.ico" alt=""></div>
+						</div> -->
+	
+						
+						<div class="ori-head">
+							
+							<div class="ori-main">
+								<h4>semester 1</h4>
+								<div><img src="/asserts/icons8_minus_sign.ico" alt=""></div>
+							</div>
+	
+							<div class="t-head">
+								<h4>#</h4>
+								<h4 class="course-space">course</h4>
+								<h4>scores</h4>
+								
+								<h4>credit</h4>
+								<h4>course type</h4>
+								<h4>grade</h4>	
+								<h4>grade point</h4>						
+							</div>
+	
+							<!-- <form class="cal-form">
+	 -->						<div class="t-row-1 t-row cal-form">
+								<div class="t-data " >
+									
+									<div class="entry ids">
+										<% for (var i = 1; i <= data.course.length; i++){ %>
+										<div><%= i %></div>
+										<% } %>
+									</div>
+									
+									<div class="entry sem-1 course-space">
+										<% data.course.map((item)=>{ %>
+										<div>
+										<%= item %>
+										</div>
+										<% }) %>	
+									</div>
+										
+									<div class="entry sem-1">
+										<% data.score.map((item)=>{ %>
+										<div>
+										<%= item %>
+										</div>
+										<% }) %>	
+										
+									</div>
+									
+									<div class="entry sem-1">
+										<% data.credit.map((item)=>{ %>
+										<div>
+										<%= item %>
+										</div>
+										<% }) %>	
+									
+									</div>
+									<div class="entry sem-1">
+										<% data.courseType.map((item)=>{ %>
+										<div>
+										<%= item %>
+										</div>
+										<% }) %>	
+										</div>
+									
+									<div class="entry sem-1 grade-point">
+										<% data.gradePoint.map((item)=>{ %>
+										<div>
+										<%= item %>
+										</div>
+										<% }) %>	
+										</div>
+											
+									
+									<div class="entry sem-1 ids">
+										<% data.grade.map((item)=>{ %>
+										<div>
+										<%= item %>
+										</div>
+										<% }) %>	
+										</div>
+											
+										
+	
+															
+								</div>
+	
+							</div>
+						
+							<!-- <div class="submit-container">
+								<button  class="submit-btn">Calculator</button>
+							
+							</div> -->
+							<!-- </form> -->
+							
+						</div>
+						
+					
+	
+						
+					</div>
+					<div class="result">
+						<div class="c-head gpa-wrap">
+							<div class="gp-head">Current GPA</div>
+	
+							<div class="gp-div">
+								<div class="gp-text">CGPA</div>
+								<div class="ac-gpa"><%= data.gpa %></div>
+							</div>
+	
+							
+						</div>
+						
+					</div>
+					</div>
+					<% }) %>
+			</div>
+			</div>
+		</section>
+	</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 	<% if(result){ %>
 	<section id="position">
 		<div class="wrap">
@@ -84,20 +239,7 @@
 					<% }) %>
 					
 
-					<!-- <div class="semisters" >
-						<div class="tab-img-2"></div>
-						<div class="head"><h4>semister 1</h4></div>
-						<div class="mark">
-							<div class="mark-item">
-								<span>gpa</span>
-								<span>3.5</span>
-							</div>
-							<div class="mark-item-icon">
-								<img src="/asserts/icons8_plus.ico" alt="">
-							</div>
-						</div>
-						
-					</div> -->
+					
 				</div>
 				
 			</div>
@@ -135,20 +277,7 @@
 					<% }) %>
 					
 
-					<!-- <div class="semisters" >
-						<div class="tab-img-2"></div>
-						<div class="head"><h4>semister 1</h4></div>
-						<div class="mark">
-							<div class="mark-item">
-								<span>gpa</span>
-								<span>3.5</span>
-							</div>
-							<div class="mark-item-icon">
-								<img src="/asserts/icons8_plus.ico" alt="">
-							</div>
-						</div>
-						
-					</div> -->
+					
 				</div>
 				
 			</div>
@@ -187,20 +316,7 @@
 					<% }) %>
 					<% } %>
 
-					<!-- <div class="semisters" >
-						<div class="tab-img-2"></div>
-						<div class="head"><h4>semister 1</h4></div>
-						<div class="mark">
-							<div class="mark-item">
-								<span>gpa</span>
-								<span>3.5</span>
-							</div>
-							<div class="mark-item-icon">
-								<img src="/asserts/icons8_plus.ico" alt="">
-							</div>
-						</div>
-						
-					</div> -->
+					
 				</div>
 				
 			</div>
@@ -239,71 +355,18 @@
 					<% }) %>
 					<% } %>
 
-					<!-- <div class="semisters" >
-						<div class="tab-img-2"></div>
-						<div class="head"><h4>semister 1</h4></div>
-						<div class="mark">
-							<div class="mark-item">
-								<span>gpa</span>
-								<span>3.5</span>
-							</div>
-							<div class="mark-item-icon">
-								<img src="/asserts/icons8_plus.ico" alt="">
-							</div>
-						</div>
-						
-					</div> -->
-				</div>
-				
-			</div>
-			
-		</div>
-	</section>
-
-
-
-
-	<!-- <section id="position">
-		<div class="wrap">
-			<div class="years">
-				<h3>Year two</h3>
-				<div class="init-year">
 					
-					<div class="semisters" >
-						<div class="tab-img"></div>
-						<div class="head"><h4>semister 1</h4></div>
-						<div  class="mark">
-							<div class="mark-item">
-								<span>gpa</span>
-								<span>3.5</span>
-							</div>
-							<div class="mark-item-icon">
-								<img src="/asserts/icons8_plus.ico" alt="">
-							</div>
-						</div>
-						
-					</div>
-
-					<div class="semisters" >
-						<div class="tab-img-2"></div>
-						<div class="head"><h4>semister 1</h4></div>
-						<div class="mark">
-							<div class="mark-item">
-								<span>gpa</span>
-								<span>3.5</span>
-							</div>
-							<div class="mark-item-icon">
-								<img src="/asserts/icons8_plus.ico" alt="">
-							</div>
-						</div>
-						
-					</div>
 				</div>
 				
 			</div>
 			
 		</div>
 	</section> -->
+
+
+
+
+
 	
 </body>
 </html>

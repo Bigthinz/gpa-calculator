@@ -4,7 +4,13 @@ const table = document.querySelector('.t-row-1')
 // const table2 = document.querySelector('.t-row-2')
 const submit = document.querySelector('.submit-btn')
 const formSub = document.querySelector('.grade-form')
-let gp =[]
+let gp =[];
+let acadYear = document.querySelector('#year').value	
+let acadSem = document.querySelector('#sem').value	
+console.log(acadYear)
+console.log(acadSem)
+let academic = acadYear + acadSem
+console.log(academic)
 
 
 
@@ -190,11 +196,13 @@ creating.calcGrade(table)
 		    const credit = document.querySelectorAll('.sem-1 .credit')
 		    const courseType = document.querySelectorAll('.sem-1 .course-type')
 		     const gradePoint = document.querySelectorAll('.grade-point')
+			
 		    let crs = []
 		    let sco = []
 		    let cred = []
 		    let csrtyp = []
 		    let grade = []
+			
 
 		    // console.log(document.querySelectorAll('.sem-1 .entry .course'))
 
@@ -295,7 +303,7 @@ creating.calcGrade(table)
 
 			tcgpa = tcgpa.toFixed(2)
 
-			result(semister, crs,sco,cred,csrtyp,gp, grade,tcgpa)
+			result(semister, crs,sco,cred,csrtyp,gp, grade,tcgpa,academic)
 
 			console.log('submitted')
 			
@@ -314,14 +322,14 @@ creating.calcGrade(table)
 	
 
 
-	const result = async(semister,course,score,credit,courseType,grade, gradePoint,gpa)=>{
+	const result = async(semister,course,score,credit,courseType,grade, gradePoint,gpa, academic)=>{
 		try{
 			const res = await axios({
 				method:"POST",
 				url:"http://localhost:5000/api/v1/result",
 				data:{
 					year:"year 1",
-					semester:semister,
+					semester:"semester 1",
 					course:course,
 					score:score,
 					credit:credit,
@@ -329,11 +337,13 @@ creating.calcGrade(table)
 					grade:grade,
 					gradePoint:gradePoint,
 					gpa:gpa
+					// academic_year: acedemic
 
 				}
 			})
 
-			if(result.data.status === 'success'){npm
+			if(result.data.status === 'success'){
+				showAlert('success', 'Logged in successfully')
 		}
 
 
@@ -350,11 +360,34 @@ creating.calcGrade(table)
 
 
 		}catch(err){
-			console.log(err.response)
+			showAlert('error', err.response.data.message)
+			console.log(err.response);
 			submit.removeAttribute('disabled')
 			submit.innerHTML ='Calculate'
+
+
+			let div = document.createElement('div')
+
 		}
 	}
+
+
+
+
+
+	const hideAlert= ()=>{
+		const el = document.querySelector('.alert')
+		if(el) el.parentElement.removeChild(el)
+	}
+
+	
+const showAlert = (type, message)=>{
+	hideAlert()
+	const markup = `<div class="alert alert--${type}">${message}</div>`
+	document.querySelector('body').insertAdjacentHTML('afterbegin', markup)
+	window.setTimeout(hideAlert,5000)
+}
+
 
 
 

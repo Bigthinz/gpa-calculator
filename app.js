@@ -6,7 +6,8 @@ const cookieParser = require('cookie-parser')
 
 const app = express()
 
-
+const globalErrorHandler = require('./controller/errorController')
+const AppError = require('./utils/appError')
 const authRoute = require('./routes/auth')
 const userRoute = require('./routes/userRoute')
 const viewRoute = require('./routes/viewRoute')
@@ -51,5 +52,13 @@ app.use('/api/v1/user', userRoute)
 app.use('/api/v1/result', resultRoute)
 
 
+
+
+app.all('*', (req,res,next)=>{
+
+	next(new AppError(`Cant find ${req.originalUrl} on this server`, 404))
+})
+
+app.use(globalErrorHandler)
 
 module.exports = app
