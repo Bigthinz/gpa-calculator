@@ -65,6 +65,13 @@ const resultSchema = new mongoose.Schema({
 })
 
 
+
+// resultSchema.pre('save', function(next){
+// 	this.academic_year = this.year + this.semester 
+// 	next()
+// })
+
+
 const Result = mongoose.model('Result', resultSchema)
 
 module.exports = Result;

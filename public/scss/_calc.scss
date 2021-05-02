@@ -542,7 +542,7 @@ select{
 	color: #fff;
 	padding: 6px 15px;
 	outline: none;
-	border: 1px solid rgba(0,0,0,.9);
+	border: 1px solid rgba(0,0,0,.1);
 			border-radius: 5px;
 			text-align: center;
 		
@@ -591,6 +591,14 @@ select{
 }
 
 
+.currentCgpa{
+	font-size: 40px;
+	text-align: center;
+	padding: 30px 0px;
+	background: #31262A;
+}
+
+
 
   
 
@@ -617,10 +625,10 @@ select{
 }
 
 .alert--error{
-	background: #B53426;
+	background: #D1443B;
 }
 
 .alert--success{
-	background: #96B668;
+	background: #25D265;
 }
 

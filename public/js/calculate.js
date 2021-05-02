@@ -374,6 +374,9 @@ creating.calcGrade(table)
 
 			if(result.data.status === 'success'){
 				showAlert('success', 'Logged in successfully')
+				window.setTimeout(() => {
+					location.assign('/')
+				}, 1000)
 		}
 
 

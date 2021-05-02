@@ -171,6 +171,10 @@
 												
 						</div>
 
+						<% if(nowGpa !== NaN ){ %>
+							<div class="currentCgpa"><%= nowGpa%></div>
+						<% }else{%>	
+
 						<div class="r-row">
 							<!-- <div class="r-data">
 								<h4>1</h4>
@@ -198,6 +202,7 @@
 						  style="width: 250px">
 						</lottie-player>
 						</div>
+						<% } %>
 						
 					</div>
 					

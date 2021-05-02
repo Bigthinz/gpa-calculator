@@ -7,9 +7,27 @@ exports.Login = async (req,res,next)=>{
 }
 
 exports.Calculator = async (req,res,next)=>{
-	// const user = await Tour.findOne({ slug: req.params.slug })
+    // const user = await Tour.findOne({ slug: req.params.slug })
+
+    const candidate = res.locals.user._id
+
+    const result = await Result.find({user: candidate})
+    let newGpa = []
+    let locGpa = result.forEach((item)=>{
+        return newGpa.push(item.gpa)
+    })
+    console.log(` array of all gpa = ${newGpa}`)
+
+    nowGpa = newGpa.reduce((ab,id)=>{
+        return ab + id
+    },0)
+
+    nowGpa = nowGpa / newGpa.length
+    nowGpa = nowGpa.toFixed(2)
+    
     res.status(200).render('calculator',{
-        title: 'GPA calculator'
+        title: 'GPA calculator',
+        nowGpa
         // user
     })
 }
@@ -30,7 +48,7 @@ exports.Cgpa = async (req,res,next)=>{
     },0)
 
     nowGpa = nowGpa / newGpa.length
-
+    nowGpa = nowGpa.toFixed(2)
    
     console.log(`total CGPA is = ${nowGpa}`)
     // console.log(result)

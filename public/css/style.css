@@ -11,7 +11,8 @@ body {
   background: #23252A;
   color: #f9f9f9;
   font-family: Poppins;
-  font-size: 13px; }
+  font-size: 13px;
+  margin-bottom: 100px; }
 
 ::-webkit-scrollbar {
   background: rgba(37, 210, 101, 0.2);
@@ -545,7 +546,7 @@ select {
   color: #fff;
   padding: 6px 15px;
   outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   text-align: center; }
   select option {
@@ -569,6 +570,12 @@ select {
     letter-spacing: 3px;
     background: #31262A; }
 
+.currentCgpa {
+  font-size: 40px;
+  text-align: center;
+  padding: 30px 0px;
+  background: #31262A; }
+
 .alert {
   position: fixed;
   left: 50%;
@@ -587,4 +594,4 @@ select {
   background: #B53426; }
 
 .alert--success {
-  background: #96B668; }
+  background: #25D265; }
